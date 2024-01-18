@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context.xsd">
+    <!-- Ранее-->
+    <!-- <bean id="firstComponent" class="org.example.suit.interfaces.Trousers"/>-->
+
+    <!-- Включаем автоматическое сканирование бинов в указанном пакете -->
+    <!-- Обратите внимание: чтобы строка заработала, в тег <beans были добавлены строки -->
+    <context:component-scan base-package="com.taras"/>
+    <!-- Дополнительные настройки и бины могут быть добавлены далее -->
+
+</beans>
