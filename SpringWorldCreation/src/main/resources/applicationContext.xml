@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="firstBean" class="com.shevchenkot.pojo.FirstBean">
+        <constructor-arg value="mr. First"/>
+    </bean>
+    <bean id="businessLogic" class="com.shevchenkot.pojo.BusinessLogicImpl"/>
+    <bean id="secondBean" class="com.shevchenkot.pojo.SecondBean">
+        <constructor-arg value="mr. Second"/>
+        <constructor-arg ref="businessLogic"/>
+    </bean>
+</beans>

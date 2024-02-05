@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="factory" class="com.taras.factory.TransportFactory"/>
+
+    <bean id="car" class="com.taras.transport.Car"
+          factory-bean="factory"
+          factory-method="createTransport">
+        <constructor-arg value="Car"/>
+    </bean>
+
+    <bean id="bicycle" class="com.taras.transport.Bicycle"
+          factory-bean="factory"
+          factory-method="createTransport">
+        <constructor-arg value="Bicycle"/>
+    </bean>
+
+    <bean id="motorcycle" class="com.taras.transport.Motorcycle"
+          factory-bean="factory"
+          factory-method="createTransport">
+        <constructor-arg value="Motorcycle"/>
+    </bean>
+
+
+</beans>
