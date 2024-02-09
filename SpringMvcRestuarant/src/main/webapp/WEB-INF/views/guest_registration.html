@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="ISO-8859-1">
+        <title>User registration form</title>
+    </head>
+        <main>
+            <h1>Create user</h1>
+            <form th:object="${guestDto}"
+                  th:action="@{/guests/create}"
+                  method="post">
+                <div>
+                    <label for="name">Name</label>
+                    <input id="name" type="text"
+                           th:field="*{name}">
+                    <p th:if="${#fields.hasErrors('name')}"
+                       th:text="${#strings.listJoin(#fields.errors('name'), ', ')}"></p>
+                </div>
+                <div>
+                    <input id="id" type="hidden" value= "0"
+                           th:field="*{id}">
+                </div>
+                <button type="submit">Register</button>
+            </form>
+        </main>
+
+        <a href="../../">Home</a>
+    </body>
+</html>
