@@ -1,6 +1,9 @@
 package org.example.immun.sys;
 
-public class Corona implements Vaccination{
+import org.springframework.stereotype.Component;
+
+@Component
+public class Flue implements Vaccination{
     @Override
     public void printName() {
         System.out.println(Measles.class.getSimpleName() + " is used");

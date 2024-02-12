@@ -1,2 +1,5 @@
-package pojo;public class DataBaseConnection {
+package pojo;
+
+public class DataBaseConnection {
+
 }

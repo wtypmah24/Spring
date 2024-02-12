@@ -1,7 +1,7 @@
 package com.taras.season;
 
-public class Spring implements Season {
-    public Spring() {
-        System.out.println("Spring has come.");
+public class Summer implements Season {
+    public Summer() {
+        System.out.println("Summer has come." + this.getClass().getSimpleName());
     }
 }

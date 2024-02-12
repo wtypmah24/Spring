@@ -1,9 +1,7 @@
-package org.example.config;
+package rating.app.config;
 
 import jakarta.servlet.ServletContext;
 import jakarta.servlet.ServletException;
-import org.example.filter.RequestBlockFilter;
-import org.example.filter.ResponseBlockFilter;
 import org.springframework.web.filter.HiddenHttpMethodFilter;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
@@ -24,13 +22,11 @@ public class MyWebAppInitializer extends AbstractAnnotationConfigDispatcherServl
         return new String[]{"/"};
     }
 
-    // Переопределяем метод, который запускается при старте web-приложения
+     //Переопределяем метод, который запускается при старте web-приложения
     @Override
     public void onStartup(ServletContext myServletContext) throws ServletException {
         super.onStartup(myServletContext);
         registerHiddenFieldFilter(myServletContext); // добавляем в сервлет нужный фильтр
-        registerRequestBlockFieldFilter(myServletContext);
-        registerResponseBlockFilter(myServletContext);
     }
 
     private void registerHiddenFieldFilter(ServletContext myServletContext) {
@@ -42,21 +38,5 @@ public class MyWebAppInitializer extends AbstractAnnotationConfigDispatcherServl
                 true, // добавить последним в цепочку ранее объявленных фильтров
                 "/*" // показывает, на каких url будет срабатывать фильтр (на всех)
         );
-    }
-
-    private void registerRequestBlockFieldFilter(ServletContext myServletContext) {
-        myServletContext.addFilter(
-                "requestBlockFilter",
-                new RequestBlockFilter()
-        ).addMappingForUrlPatterns(
-                null,
-                true,
-                "/*"
-        );
-    }
-
-    private void registerResponseBlockFilter(ServletContext myServletContext) {
-        myServletContext.addFilter("responseBlockFilter", new ResponseBlockFilter())
-                .addMappingForUrlPatterns(null, true, "/*");
     }
 }

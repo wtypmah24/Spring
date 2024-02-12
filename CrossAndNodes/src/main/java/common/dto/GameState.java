@@ -1,2 +1,4 @@
-package common.dto;public class GameState {
+package common.dto;
+
+public record GameState(CellState[][] cells, GameResult gameResult) {
 }

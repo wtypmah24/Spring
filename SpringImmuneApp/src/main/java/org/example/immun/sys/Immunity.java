@@ -1,2 +1,5 @@
-package org.example.immun.sys;public class Immunity {
+package org.example.immun.sys;
+
+
+public record Immunity(Vaccination vaccination) {
 }

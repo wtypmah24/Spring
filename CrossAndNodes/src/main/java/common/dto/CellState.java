@@ -1,2 +1,7 @@
-package common.dto;public enum CellState {
+package common.dto;
+
+public enum CellState {
+    O,
+    X,
+    EMPTY
 }

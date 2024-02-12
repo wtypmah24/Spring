@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                      http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         id="WebApp_ID" version="4.0">
+
+  <display-name>SpringApp_01.02.24</display-name>
+  <absolute-ordering/>
+
+  <!-- Создаём сервлет -->
+  <servlet>
+    <servlet-name>dispatcher</servlet-name>
+    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+    <init-param> <!-- Указываем, где находится конфигурация Spring -->
+      <param-name>contextConfigLocation</param-name>
+      <param-value>/WEB-INF/applicationContextMVC.xml</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup> <!-- Загружать при старте приложения. 1 - порядок загрузки -->
+  </servlet>
+  <servlet-mapping> <!-- Создаём связь сервлета с префиксом в пути URL -->
+    <servlet-name>dispatcher</servlet-name>
+    <url-pattern>/</url-pattern> <!-- Если на текущий хост придёт запрос с любым путём, он будет отправлен на наш сервлет -->
+  </servlet-mapping>
+</web-app>

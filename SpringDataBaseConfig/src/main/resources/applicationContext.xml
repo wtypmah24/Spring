@@ -1,28 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
-           http://www.springframework.org/schema/beans/spring-beans.xsd">
+           http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <bean id="factory" class="com.taras.factory.TransportFactory"/>
+    <context:property-placeholder location="classpath:application.properties"/>
 
-    <bean id="car" class="com.taras.transport.Car"
-          factory-bean="factory"
-          factory-method="createTransport">
-        <constructor-arg value="Car"/>
+    <bean id="dataBaseConfig" class="com.taras.config.DataBaseConfig">
+        <constructor-arg index="0" value="${db.url}"/>
+        <constructor-arg index="1" value="${db.login}"/>
+        <constructor-arg index="2" value="${db.password}"/>
     </bean>
 
-    <bean id="bicycle" class="com.taras.transport.Bicycle"
-          factory-bean="factory"
-          factory-method="createTransport">
-        <constructor-arg value="Bicycle"/>
-    </bean>
-
-    <bean id="motorcycle" class="com.taras.transport.Motorcycle"
-          factory-bean="factory"
-          factory-method="createTransport">
-        <constructor-arg value="Motorcycle"/>
-    </bean>
 
 
 </beans>

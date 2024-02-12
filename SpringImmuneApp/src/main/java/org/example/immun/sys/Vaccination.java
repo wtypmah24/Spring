@@ -1,2 +1,5 @@
-package org.example.immun.sys;public class Vaccination {
+package org.example.immun.sys;
+
+public interface Vaccination {
+    void printName();
 }

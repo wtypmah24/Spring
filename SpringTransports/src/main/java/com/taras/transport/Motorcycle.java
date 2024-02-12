@@ -1,8 +1,8 @@
 package com.taras.transport;
 
-public class Car implements Transport{
+public class Motorcycle implements Transport{
     @Override
     public void drive() {
-        System.out.println("Car drives");
+        System.out.println("Motorcycle drives");
     }
 }

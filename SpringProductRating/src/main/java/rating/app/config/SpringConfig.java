@@ -1,4 +1,4 @@
-package org.example.config;
+package rating.app.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
@@ -13,7 +13,7 @@ import org.thymeleaf.spring6.templateresolver.SpringResourceTemplateResolver;
 import org.thymeleaf.spring6.view.ThymeleafViewResolver;
 
 @Configuration
-@ComponentScan("org.example")
+@ComponentScan("rating.app")
 @EnableWebMvc // включение веб функций, равноценно тегу <mvc:annotation-driven/>
 public class SpringConfig implements WebMvcConfigurer {
     // имплементация интерфейс нужна, чтобы настроить под свои нужды Spring MVC.
@@ -52,6 +52,5 @@ public class SpringConfig implements WebMvcConfigurer {
         registry.viewResolver(resolver);
     }
 }
-/*Разработайте RESTful API для ресторана, которое принимает название блюда и возвращает информацию о блюде: ингредиенты, время приготовления, стоимость, пищевую ценность. Для простоты возвращайте заранее определенные данные.*/
 
 

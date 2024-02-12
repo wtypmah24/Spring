@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Set user status form</title>
+</head>
+<body>
+<main>
+    <h1>Set user status</h1>
+    <form th:object="${setStatusForm}"
+          th:action="@{/view/profile/set_status/{id}(id=${id})}"
+          th:method="patch">
+        <div>
+            <label for="status">Status</label>
+            <input id="status" type="text" th:field="*{status}">
+            <p th:if="${#fields.hasErrors('status')}"
+               th:text="${#strings.listJoin(#fields.errors('status'), ', ')}"></p>
+        </div>
+        <button type="submit">Update user</button>
+    </form>
+</main>
+<a href="../../">Home</a>
+</body>
+</html>
+<!--============-->

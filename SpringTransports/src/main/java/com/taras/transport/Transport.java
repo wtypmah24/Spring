@@ -1,2 +1,5 @@
-package com.taras.transport;public interface Transport {
+package com.taras.transport;
+
+public interface Transport {
+    void drive();
 }

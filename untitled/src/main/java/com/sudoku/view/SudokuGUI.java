@@ -23,7 +23,7 @@ public class SudokuGUI extends JFrame {
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 JPanel panel = new JPanel(new GridLayout(3, 3));
-                panel.setBorder(BorderFactory.createLineBorder(Color.BLACK, 1)); // Frame
+                panel.setBorder(BorderFactory.createLineBorder(java.awt.Color.BLACK, 1)); // Frame
                 panel.setBackground(new Color(141, 127, 127));
                 panels[i][j] = panel;
                 add(panel);

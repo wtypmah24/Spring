@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context.xsd">
+    <!-- Ранее-->
+    <!-- <bean id="firstComponent" class="org.example.suit.interfaces.Trousers"/>-->
+
+    <!-- Включаем автоматическое сканирование бинов в указанном пакете -->
+    <!-- Обратите внимание: чтобы строка заработала, в тег <beans были добавлены строки -->
+    <context:component-scan base-package="org.example.immun.sys"/>
+    <!-- Дополнительные настройки и бины могут быть добавлены далее -->
+
+    <bean id="immunityCorona" class="org.example.immun.sys.Immunity">
+        <constructor-arg name="vaccination" ref="corona"/>
+    </bean>
+    <bean id="immunityRabies" class="org.example.immun.sys.Immunity">
+        <constructor-arg name="vaccination" ref="rabies"/>
+    </bean>
+    <bean id="immunityFlue" class="org.example.immun.sys.Immunity">
+        <constructor-arg name="vaccination" ref="flue"/>
+    </bean>
+    <bean id="immunityMeasles" class="org.example.immun.sys.Immunity">
+        <constructor-arg name="vaccination" ref="measles"/>
+    </bean>
+
+</beans>

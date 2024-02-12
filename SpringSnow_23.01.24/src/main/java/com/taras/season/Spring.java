@@ -1,9 +1,7 @@
 package com.taras.season;
 
-public class Winter implements Season {
-    private Snow snow;
-
-    public Winter(Snow snow) {
-        this.snow = snow;
+public class Spring implements Season {
+    public Spring() {
+        System.out.println("Spring has come." + this.getClass().getSimpleName());
     }
 }

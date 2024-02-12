@@ -3,12 +3,10 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
            http://www.springframework.org/schema/beans/spring-beans.xsd">
-    <bean id="firstBean" class="com.shevchenkot.pojo.FirstBean">
-        <constructor-arg value="mr. First"/>
+    <bean id="world" class="world.World"
+    init-method="declareCivilization"
+    destroy-method="declareEnd">
+        <constructor-arg value="Earth"/>
     </bean>
-    <bean id="businessLogic" class="com.shevchenkot.pojo.BusinessLogicImpl"/>
-    <bean id="secondBean" class="com.shevchenkot.pojo.SecondBean">
-        <constructor-arg value="mr. Second"/>
-        <constructor-arg ref="businessLogic"/>
-    </bean>
+
 </beans>

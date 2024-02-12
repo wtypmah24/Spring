@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="UTF-8">
-  <title>$Title$</title>
+  <title>Product Rating</title>
 </head>
 <body>
-$END$
+<h1>Product Rating</h1>
+<p>Product name: <span th:text="${productDto.name}"/></p>
+<p>Average Rating: <span th:text="${productDto.avgRating}"></span></p>
+<p>Number of Reviews: <span th:text="${productDto.reviewCount}"></span></p>
 </body>
 </html>

@@ -1,2 +1,4 @@
-package com.taras.season;public interface Season {
+package com.taras.season;
+
+public interface Season {
 }
