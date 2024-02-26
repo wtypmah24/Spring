@@ -1,0 +1,36 @@
+-- Database: postgres
+-- Выполните данные запросы после запуска приложения, чтобы не создавать товары вручную.
+INSERT INTO goods_items (item_name, description, price) VALUES ('Coffee Machine', 'Espresso, 15 bars of pressure', 120.0);
+INSERT INTO goods_items (item_name, description, price) VALUES ('Kettle', '1.5L, stainless steel', 25.0);
+INSERT INTO goods_items (item_name, description, price) VALUES ('Microwave Oven', '800W, 20L capacity', 70.0);
+INSERT INTO goods_items (item_name, description, price) VALUES ('Toaster', '2 slices, 6 browning levels', 30.0);
+INSERT INTO goods_items (item_name, description, price) VALUES ('Laptop', '15 inch, SSD 256GB', 800.0);
+INSERT INTO goods_items (item_name, description, price) VALUES ('Smartphone', '5G, 128GB', 600.0);
+INSERT INTO goods_items (item_name, description, price) VALUES ('Tablet', '10 inch, 64GB', 300.0);
+INSERT INTO goods_items (item_name, description, price) VALUES ('E-book Reader', '6 inch, waterproof', 150.0);
+INSERT INTO goods_items (item_name, description, price) VALUES ('Wireless Earbuds', 'Noise Cancelling', 130.0);
+INSERT INTO goods_items (item_name, description, price) VALUES ('Smart Watch', 'GPS, Heart Rate Monitor', 250.0);
+INSERT INTO goods_items (item_name, description, price) VALUES ('Portable Speaker', 'Bluetooth, Waterproof', 100.0);
+INSERT INTO goods_items (item_name, description, price) VALUES ('Digital Camera', '24MP, 4K Video', 500.0);
+INSERT INTO goods_items (item_name, description, price) VALUES ('Action Camera', 'Waterproof, 4K', 200.0);
+INSERT INTO goods_items (item_name, description, price) VALUES ('Gaming Console', '1TB, 2 Controllers', 400.0);
+INSERT INTO goods_items (item_name, description, price) VALUES ('VR Headset', '6DoF, Wireless', 350.0);
+INSERT INTO goods_items (item_name, description, price) VALUES ('Drone', '4K Camera, GPS', 750.0);
+INSERT INTO goods_items (item_name, description, price) VALUES ('Fitness Tracker', 'Sleep Monitor, Waterproof', 80.0);
+INSERT INTO goods_items (item_name, description, price) VALUES ('Electric Scooter', '15 mph, 20 miles range', 300.0);
+INSERT INTO goods_items (item_name, description, price) VALUES ('Bicycle', 'Mountain bike, 21 speed', 250.0);
+INSERT INTO goods_items (item_name, description, price) VALUES ('Yoga Mat', 'Non-slip, 6mm thick', 20.0);
+INSERT INTO goods_items (item_name, description, price) VALUES ('Tennis Racket', 'Carbon fiber, Lightweight', 90.0);
+INSERT INTO goods_items (item_name, description, price) VALUES ('Football', 'Leather, Official size', 25.0);
+INSERT INTO goods_items (item_name, description, price) VALUES ('Backpack', '20L, Waterproof', 50.0);
+INSERT INTO goods_items (item_name, description, price) VALUES ('Camping Tent', '4 person, Waterproof', 120.0);
+INSERT INTO goods_items (item_name, description, price) VALUES ('Sleeping Bag', '-10 degrees, Mummy style', 70.0);
+INSERT INTO goods_items (item_name, description, price) VALUES ('Hiking Boots', 'Waterproof, Breathable', 100.0);
+INSERT INTO goods_items (item_name, description, price) VALUES ('Sunglasses', 'Polarized, UV protection', 60.0);
+INSERT INTO goods_items (item_name, description, price) VALUES ('Book', 'Fiction, Hardcover', 15.0);
+INSERT INTO goods_items (item_name, description, price) VALUES ('Board Game', 'Strategy, 2-4 players', 30.0);
+INSERT INTO goods_items (item_name, description, price) VALUES ('Jigsaw Puzzle', '1000 pieces, Landscape', 20.0);
+INSERT INTO goods_items (item_name, description, price) VALUES ('Electric Kettle', '1.7L, Stainless steel', 25.0);
+INSERT INTO goods_items (item_name, description, price) VALUES ('Blender', '500W, Glass jar', 40.0);
+INSERT INTO goods_items (item_name, description, price) VALUES ('Vacuum Cleaner', 'Bagless, HEPA filter', 150.0);
+INSERT INTO goods_items (item_name, description, price) VALUES ('Air Purifier', 'HEPA filter, Quiet', 200.0);

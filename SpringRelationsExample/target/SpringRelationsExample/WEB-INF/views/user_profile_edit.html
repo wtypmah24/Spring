@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>User registration form</title>
+</head>
+<body>
+<main>
+    <h1>Edit userResponseDto</h1>
+    <form th:object="${editForm}"
+          th:action="@{/view/profile/{id}/edit(id=${userId})}"
+          th:method="PUT">
+        <div>
+            <label for="firstName">First name</label>
+            <input id="firstName" type="text" th:field="*{firstName}">
+            <div style="color: red"
+               th:if="${#fields.hasErrors('firstName')}"
+               th:errors="*{firstName}">Invalid</div>
+        </div>
+        <div>
+            <label for="lastName">Last name</label>
+            <input id="lastName" type="text" th:field="*{lastName}">
+            <div style="color: red"
+               th:if="${#fields.hasErrors('lastName')}"
+               th:errors="*{lastName}">Invalid</div>
+        </div>
+        <div>
+            <label for="email">Email address</label>
+            <input id="email" type="email" th:field="*{email}">
+            <div style="color: red"
+               th:if="${#fields.hasErrors('email')}"
+               th:errors="*{email}">Invalid</div>
+        </div>
+        <div>
+            <label for="birthDate">Date of birth</label>
+            <input id="birthDate" type="date" th:field="*{birthDate}">
+            <div style="color: red"
+               th:if="${#fields.hasErrors('birthDate')}"
+               th:errors="*{birthDate}">Invalid</div>
+        </div>
+        <button type="submit">Update user</button>
+    </form>
+</main>
+
+<a href="../../">Home</a>
+</body>
+</html>
