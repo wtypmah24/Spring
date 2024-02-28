@@ -1,0 +1,140 @@
+{
+	"info": {
+		"_postman_id": "e82ca56a-7458-4ea3-83fc-45a97df1ace2",
+		"name": "Hotel",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32654663"
+	},
+	"item": [
+		{
+			"name": "Reserve room",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"customerName\": \"John Doe\",\n    \"startDate\": \"2024-03-01\",\n    \"endDate\": \"2024-03-05\",\n    \"roomNumbers\": [\"101\", \"102\", \"103\"]\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/reserve",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"reserve"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get available rooms",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"customerName\": \"John Doe\",\n    \"startDate\": \"2024-03-01\",\n    \"endDate\": \"2024-03-05\",\n    \"roomNumbers\": [\"101\", \"102\", \"103\"]\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/available?start=2024-03-01&end=2024-03-05",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"available"
+					],
+					"query": [
+						{
+							"key": "start",
+							"value": "2024-03-01"
+						},
+						{
+							"key": "end",
+							"value": "2024-03-05"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all rooms",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"customerName\": \"John Doe\",\n    \"startDate\": \"2024-03-01\",\n    \"endDate\": \"2024-03-05\",\n    \"roomNumbers\": [\"101\", \"102\", \"103\"]\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/rooms",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"rooms"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cancel reservation",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"customerName\": \"John Doe\",\n    \"startDate\": \"2024-03-01\",\n    \"endDate\": \"2024-03-05\",\n    \"roomNumbers\": [\"101\", \"102\", \"103\"]\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/rooms/cancel/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"rooms",
+						"cancel",
+						"4"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
